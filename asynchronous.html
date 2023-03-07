@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //make soup
+        // boil water 10 min
+        // chop carrots
+        // add carrots boil for 5 min
+        // chop onion
+        // add onion boil for 5 min
+
+        boilWater(1000)
+        console.log('chop carrots');
+        for(let i=0;i<10000;i++){
+            console.log('still busy');
+        }
+
+
+        function boilWater(time){
+            console.log('boiling....');
+            setTimeout(()=>{
+                console.log('done.');
+            },time)
+        }
+
+    </script>
+</body>
+</html>

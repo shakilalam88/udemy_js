@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // make soup
+        // boil water 10 min
+        // chop carrots
+        // add carrots boil for 5 min
+        // chop onion
+        // add onion boil for 5 min
+
+        //boiling 10min
+        // chop carrot
+        // add carrot and boil 5min
+        // chop onion 
+        // carrot done
+        // add onions and boil 5min
+        // onion done
+        // done
+
+        // boilWater()
+        // function boilWater(){
+        //     console.log('boiling for 10min');
+        //     console.log('chop carrot');
+        //     setTimeout(()=>{
+        //         setTimeout(()=>{
+        //             console.log('add carrot and boil 5min');
+        //             console.log('chop onion');
+        //             setTimeout(()=>{
+        //                 console.log('carrot done');
+        //                 console.log('add onions and boil 5min');
+        //             },5000)
+        //             console.log('onion done');
+        //         },5000)
+        //         console.log('done');
+        //     },10000)
+        // }
+
+        boilWater()
+        console.log('chop carrot');
+        function boilWater(){
+            console.log('boiling...');
+            setTimeout(()=>{
+                console.log('done');
+                console.log('add carrot');
+                setTimeout(()=>{
+                    console.log('carrots done');
+                    console.log('add onions');
+                    setTimeout(()=>{
+                        console.log('onions done');
+                    },5000)
+                },5000)
+                console.log('chop onion');
+            },10000)
+
+        }
+    </script>  
+
+    
+</body>
+</html>
