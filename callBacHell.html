@@ -7,7 +7,52 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+        <h1 class="one">one</h1>
+        <h1 class="two">two</h1>
+        <h1 class="three">three</h1>
+        <button class="btn">click me</button>
+    </div>
+
+
     <script>
+        const heading1 = document.querySelector('.one')
+        const heading2 = document.querySelector('.two')
+        const heading3 = document.querySelector('.three')
+        const btn = document.querySelector('.btn')
+
+        // btn.addEventListener('click',()=>{
+        //     console.log('first');
+        // })
+        // console.log('second');
+
+        // btn.addEventListener('click',()=>{
+        //     setTimeout(()=>{
+        //         heading1.style.color = 'red';
+        //         console.log('red');
+        //     },3000)
+        //     setTimeout(()=>{
+        //         heading2.style.color = 'green';
+        //         console.log('green');
+        //     },1000)
+        //     setTimeout(()=>{
+        //         heading3.style.color = 'blue';
+        //         console.log("blue");
+        //     },4000)
+        // })
+
+        btn.addEventListener('click',()=>{
+            setTimeout(()=>{
+                heading1.style.color = 'red';
+                setTimeout(()=>{
+                    heading2.style.color = 'green';
+                    setTimeout(()=>{
+                        heading3.style.color = 'blue'
+                    },1000)
+                },5000)
+            },1000)
+        })
+
         // make soup
         // boil water 10 min
         // chop carrots
@@ -42,24 +87,24 @@
         //     },10000)
         // }
 
-        boilWater()
-        console.log('chop carrot');
-        function boilWater(){
-            console.log('boiling...');
-            setTimeout(()=>{
-                console.log('done');
-                console.log('add carrot');
-                setTimeout(()=>{
-                    console.log('carrots done');
-                    console.log('add onions');
-                    setTimeout(()=>{
-                        console.log('onions done');
-                    },5000)
-                },5000)
-                console.log('chop onion');
-            },10000)
+        // boilWater()
+        // console.log('chop carrot');
+        // function boilWater(){
+        //     console.log('boiling...');
+        //     setTimeout(()=>{
+        //         console.log('done');
+        //         console.log('add carrot');
+        //         setTimeout(()=>{
+        //             console.log('carrots done');
+        //             console.log('add onions');
+        //             setTimeout(()=>{
+        //                 console.log('onions done');
+        //             },5000)
+        //         },5000)
+        //         console.log('chop onion');
+        //     },10000)
 
-        }
+        // }
     </script>  
 
     

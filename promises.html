@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="one">one</h1>
+        <h1 class="two">two</h1>
+        <h1 class="three">three</h1>
+        <button class="btn">click me</button>
+    </div>
+
+    <script>
+        //PROMISES -Pending , Resolved, Rejected
+        // then catch - pass another callback
+
+        const heading1 = document.querySelector('.one')
+        const heading2 = document.querySelector('.two')
+        const heading3 = document.querySelector('.three')
+        const btn = document.querySelector('.btn');
+
+        btn.addEventListener('click',()=>{
+
+        })
+        const abc = 'abd'
+        const myPromise = new Promise((resolve,reject)=>{
+            let value = true
+            if (value){
+                resolve([1,2,3])
+            }else{
+                reject(`there was a error, value is false`)
+            }
+        })
+        myPromise.then((data)=>{
+            console.log(data);
+        }).catch((error)=>{
+            console.log(error);
+        })
+
+        console.log(myPromise.value);
+
+        // btn.addEventListener('click',()=>{
+        //     setTimeout(()=>{
+        //         heading1.style.color = 'red';
+        //         setTimeout(()=>{
+        //             heading2.style.color = 'green';
+        //             setTimeout(()=>{
+        //                 heading3.style.color = 'blue'
+        //             },1000)
+        //         },5000)
+        //     },1000)
+        // })
+    </script>  
+
+    
+</body>
+</html>

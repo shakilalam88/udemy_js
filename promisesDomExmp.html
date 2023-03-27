@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+    <style>
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+            Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          text-align: center;
+        }
+        h1 {
+          letter-spacing: 2px;
+          text-align: center;
+        }
+        img {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="one">one</h1>
+        <h1 class="two">two</h1>
+        <h1 class="three">three</h1>
+        <button class="btn">click me</button>
+            <!-- <img src="https://source.unsplash.com/random" alt="random image" /> -->
+          </div>
+    </div>
+
+    <script>
+      const heading1 = document.querySelector('.one')
+      const heading2 = document.querySelector('.two')
+      const heading3 = document.querySelector('.three')
+      const btn = document.querySelector('.btn');
+
+      //callback 
+
+        // btn.addEventListener('click',()=>{
+        //     setTimeout(()=>{
+        //         heading1.style.color = 'red';
+        //         setTimeout(()=>{
+        //             heading2.style.color = 'green';
+        //             setTimeout(()=>{
+        //                 heading3.style.color = 'blue'
+        //             },1000)
+        //         },5000)
+        //     },1000)
+        // })
+
+
+        //PROMISES -Pending , Resolved, Rejected
+        // then catch - pass another callback
+
+
+        
+        // btn.addEventListener('click',()=>{
+        //     addColor(1000,heading1,'red')
+        //     .then(()=> addColor(2000,heading2,'green'))
+        //     .then(()=>addColor(1000,heading3,'blue'))
+        //     .catch((error)=>{console.log(error);})
+        // })
+
+        // function addColor(time,element,color){
+        //     const myPromise = new Promise(( resolve,reject)=>{
+        //         if(element){
+        //             setTimeout(()=>{
+        //                 element.style.color = color;
+        //                 resolve();
+        //             },time)
+        //         }else{
+        //             reject(new Error(`there are no such element found ${element}`))
+        //         }
+        //     })
+        //     return myPromise;
+        // }
+
+        // async await
+
+        btn.addEventListener('click', async()=>{
+          try {
+            await addColor(1000,heading1,'red')
+            await addColor(3000,heading2,'blue')
+            await addColor(1000,heading3,'green')
+          } catch (error) {
+            console.log(error);
+          }
+
+        })
+
+        function addColor(time,element,color){
+          const myPromise = new Promise((resolve,reject )=>{
+            if(element){
+            setTimeout(()=>{
+              element.style.color = color;
+              resolve()
+            },time)
+            }else{
+              reject(new Error(`this is so such element ${element}`))
+            }
+          })
+          return myPromise
+          
+        }
+    </script>  
+
+    
+</body>
+</html>
