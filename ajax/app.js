@@ -1,4 +1,4 @@
-//AJAX request      ⬅️
+//AJAX request  before ES6    ⬅️
 
 // const btn = document.querySelector(".btn");
 // const url = "./api/sample.txt";
@@ -49,4 +49,24 @@
 //   xhr.send();
 // }
 
-//
+// fetch In ES6 ⬅️
+
+const url = "./api/people.json";
+
+// const response = fetch(url);
+fetch(url)
+  .then((resp) => {
+    //response object
+    //useful prop and method
+    //console.log(resp)
+    //convert response into JSON data
+    //returns promise
+    console.log(resp);
+    return resp.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    return console.log(err);
+  });
