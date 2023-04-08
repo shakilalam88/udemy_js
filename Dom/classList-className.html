@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+        .colors {
+            background: red;
+            color: white;
+        }
+
+        .text {
+            font-size: 2rem;
+            letter-spacing: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="first" class="text text1">i'm first element</h1>
+    <h1 id="second">i'm second element</h1>
+    <h1 id="third">i'm third element</h1>
+    
+    <script>
+        const first = document.getElementById('first')
+        const second = document.getElementById('second')
+        const third = document.getElementById('third')
+
+        // const classValue = first.className
+        // console.log(classValue);
+
+        second.className = 'colors text';
+
+        // third.classList.add('colors');
+        // third.classList.add('text');
+
+        third.classList.add("colors","text");
+        third.classList.remove('text');
+
+        let result = third.classList.contains('text');
+        if(result){
+            console.log('yes text is contains');
+        }else{
+            console.log('no text class in not contains');
+        }
+
+        const classValue = third.classList;
+        const classList = third.classList;
+        console.log(classValue,classList);
+    </script>
+</body>
+
+</html>
