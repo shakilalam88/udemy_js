@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <script>
+        // keypress - when key is pressed
+        // keydown - when key is down
+        // keyup - when key is up
+
+        const nameInput = document.getElementById('name');
+
+        // nameInput.addEventListener('keydown',()=>{
+        //     console.log('you pressed a keydown');
+        // })
+
+        // nameInput.addEventListener('keyup',()=>{
+        //     console.log('you pressed a keyup');
+        // })
+
+        nameInput.addEventListener('keyup',()=>{
+            console.log(nameInput.value);
+        })
+    </script>
+</body>
+</html>
