@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+      .red {
+        background: red;
+        color: white;
+      }
+      .blue {
+        background: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="result">
+      <h1 class="red">i'm the child of results</h1>
+    </div>
+    
+    <script>
+        //crateElement('element')
+        //createTextNode('text content')
+        //element.appendChild(childElement)
+
+        const result = document.querySelector('#result');
+
+        //crate empty element
+        const bodyDiv = document.createElement('div');
+
+        //crate text node
+        const text = document.createTextNode('hello world')
+        bodyDiv.appendChild(text);
+        document.body.appendChild(bodyDiv);
+
+        const heading = document.createElement('h2');
+        const headingText = document.createTextNode('dynamic heading');
+        
+        heading.appendChild(headingText);
+        document.body.appendChild(heading);
+        heading.classList.add('blue')
+
+    </script>
+  </body>
+</html>
