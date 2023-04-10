@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue{
+            background: blue;
+            color: white;
+            text-transform: capitalize;
+            letter-spacing: 18px;
+        }
+        .red{
+            background: red;
+            color: white;
+            text-transform: uppercase;
+            font-size: 2rem;
+        }
+        .btn{
+            background: coral;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+        }
+        a{
+            display: inline-block;
+            margin-top: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">click me</button>
+    <h1>some heading</h1>
+    <a href="" id="link">random link</a>
+    <script>
+        //event object argument e,evt
+        //info about triggered event
+        //event.type          I
+        //event.currentTarget
+        //this keyword
+        // preventDefault() - prevents default behavior
+
+        const heading = document.querySelector('h1');
+        const btn = document.querySelector('.btn');
+        const link = document.getElementById('link')
+
+        heading.addEventListener('click',(event)=>{
+            console.log(event.currentTarget);
+            console.log(this);
+        })
+        heading.addEventListener('click',function(event){
+            console.log(event.currentTarget);
+            console.log(this);
+        })
+        btn.addEventListener('click',(event)=>{
+            console.log(event.currentTarget.classList.add('blue'));
+        })
+
+        function someFunc(e){
+            e.preventDefault()
+        }
+        link.addEventListener('click',someFunc)
+    </script>
+</body>
+</html>

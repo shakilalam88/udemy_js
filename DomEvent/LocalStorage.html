@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>LocalStorage</h1>
+    <script>
+        // web storage API - provided by browser
+        // session storage, local storage
+        // setItem, getItem, removeItem, clear
+
+        // localStorage.setItem('name','shakiL');
+        // sessionStorage.setItem('name','shakiL')
+
+        localStorage.setItem('name','shakil')
+        localStorage.setItem('friend','john')
+        localStorage.setItem('job','developer')
+        localStorage.setItem('address','street 123')
+
+        const name = localStorage.getItem('name')
+        console.log("🚀  file: LocalStorage.html:24  name", name);
+
+        localStorage.removeItem('name');
+        const anotherName = localStorage.getItem('name');
+        console.log("🚀  file: LocalStorage.html:28  anotherName", anotherName)
+        localStorage.clear()
+        
+    </script>
+</body>
+</html>

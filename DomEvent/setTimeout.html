@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // setTimeout - runs function one after specific time
+        // - pass function reference
+        // - duration in ms (1000ms = 1 second)
+        // - returns unique identifier
+        // - clearTimeout to cancel
+        // - on window object
+
+         function sayHello(){
+            console.log('hello shakil');
+         }
+         setTimeout(sayHello,5000)
+
+         function showScore(name,score){
+            console.log(`hello ${name}, your score ${score}`)
+         }
+        //  setTimeout(showScore,1000,'shakil',"45%")
+
+         const firstID = setTimeout(showScore,1000,'shakil',"45%")
+         const secondID = setTimeout(showScore,1000,'john',"55%")
+
+         console.log(firstID,secondID);
+         clearTimeout(firstID)
+        // setTimeout((name='shakil', score='45%')=>{
+        //     console.log(`hello ${name}, your score ${score}`)
+        // },1000)
+    </script>
+</body>
+</html>

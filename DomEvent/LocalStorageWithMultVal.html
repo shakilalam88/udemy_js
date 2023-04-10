@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local storage with multiple value</h1>
+    <script>
+        //JSON.stringify(), JSON.parse()
+        const weekName= ['sunday','monday','tuesday'];
+        localStorage.setItem('week',JSON.stringify(weekName));
+
+        const week = JSON.parse(localStorage.getItem('week'));
+        console.log(week[0]);
+
+        let fruits;
+        if(localStorage.getItem('fruits')){
+            fruits = JSON.parse(localStorage.getItem('fruits'))
+        }else{
+            fruits=[];
+        }
+        console.log(fruits);
+        fruits.push('orange');
+        localStorage.setItem('fruits',JSON.stringify(fruits))
+
+    </script>
+</body>
+</html>
