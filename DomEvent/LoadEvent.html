@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="food.jpg" alt="">
+    <script>
+        // The load event is fired when the whole page has loaded, including
+        // all dependent resources such as stylesheets and images. This is
+        // in contrast to DOMContentLoaded, which is fired as soon as the
+        // page DOM has been loaded, without waiting for resources to finish
+        // Loading.
+
+        window.addEventListener('load',function(){
+            const img = document.querySelector('img')
+            console.log(img);
+            console.log(img.width);
+        })
+    </script>
+</body>
+</html>

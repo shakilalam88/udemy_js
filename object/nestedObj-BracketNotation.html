@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // nested objects
+        // set variable as property value
+        // dot notation vs bracket notation
+
+        let random= 'random-value'
+        const age = 60;
+        const person ={
+            name: 'shakil',
+            age: age,
+            married: false,
+            siblings:['akil','farhan'],
+            greet: function(name){
+                console.log(`hello, my name is ${name}`);
+            },
+            sayHello(name){
+                console.log(`hello, my name is ${name}`);
+            },
+            job:{
+                title: 'developer',
+                company: {
+                    name:'Q1',
+                    address: 'delhi'
+                }
+            },
+            'random-value': 'random'
+        };
+        console.log(person.job.title);
+        console.log(person.age);
+        console.log(person['age']);
+        console.log(person[random]);
+        console.log(person['random-value']);
+    </script>
+</body>
+</html>
