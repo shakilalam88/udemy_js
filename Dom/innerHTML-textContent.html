@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            background: red;
+            color: white;
+        }
+
+        .blue {
+            background: blue;
+            color: wheat;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="first">
+        <li class="item">list item nn</li>
+        <li>list item</li>
+    </ul>
+    <div id="second">
+        i have some text content
+    </div>
+    <script>
+        //innerHTML
+        //textContent
+
+        const list = document.getElementById('first');
+        const div = document.getElementById('second');
+        const item = document.querySelector('.item');
+        console.log("🚀  file: innerHTML-textContent.html:38  item", item);
+
+        console.log(div.textContent);
+        console.log(list.innerHTML)
+        console.log(list.textContent);
+
+        const randomVar = `random value`;
+
+        const ul = document.createElement('ul');
+        ul.innerHTML = `<li class="item">${randomVar}</li>
+        <li>list item</li>`;
+        document.body.appendChild(ul)
+    </script>
+</body>
+
+</html>
