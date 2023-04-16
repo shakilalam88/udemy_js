@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            margin: 1rem;
+            font-size: 1.5rem;
+        }
+        .box{
+            margin: 1rem;
+            width: 150px;
+            height: 150px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <button class="btn">click me</button>
+    <div class="box"></div>
+    <script>
+    // innerWidth The read-only Window property the interior width of
+    // the window in pixels
+    // inner rHeight The read-only property of the Window interface
+    // returns the interior height of the window in pixels
+    // The Element. getBoundingClientRect () method returns a DOMRect object
+    // providing information about the size of an element and its position
+    // relative to the viewport.
+
+    // console.log('height :' + window.innerHeight);
+    // console.log('width :' + window.innerWidth);
+
+    const btn = document.querySelector('.btn')
+    const box = document.querySelector('.box');
+
+    btn.addEventListener('click',function(){
+        const values = box.getBoundingClientRect()
+        console.log(values);
+    })
+    </script>
+</body>
+</html>

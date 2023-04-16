@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // objects are collections of key (property) value pairs
+        // Property values can be strings, numbers, booleans, arrays and
+        // functions however if the property value is a function it's
+        // called a method
+
+        const person ={
+            name: 'shakil',
+            age: 30,
+            married: false,
+            siblings:['akil','farhan'],
+            greet: function(name){
+                console.log(`hello, my name is ${name}`);
+            },
+            sayHello(name){
+                console.log(`hello, my name is ${name}`);
+            }
+        };
+
+        console.log(person);
+        console.log(person.name);
+        const name = person.name;
+        console.log(name);
+        person.age = 20;
+        person.city = 'hajipur';
+        console.log(person);
+        // delete property
+        // delete person.siblings;
+        const siblings = delete person.siblings
+        console.log(siblings);
+        console.log(person);
+
+
+    </script>
+</body>
+</html>
