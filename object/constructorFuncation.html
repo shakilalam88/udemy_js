@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Blue Print
+        // factory function and constructor function
+        // Constructor function
+        // New - crates new object, points to it, omit return
+
+        function Person(firstName,lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.fullName = function(){
+                console.log(`My full name is ${this.firstName} ${this.lastName} and I love React`);
+            }
+            // console.log(this);
+        }
+        const john =new Person('john','anderson');
+        john.fullName();
+        const bob =new Person('bob','jordan')
+        bob.fullName();
+    </script>
+</body>
+</html>
