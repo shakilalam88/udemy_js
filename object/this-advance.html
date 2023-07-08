@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <button class="btn-1">Click me</button>
+    <button class="btn-2">Click me</button>
+    <script>
+        // In Reg function(not arrow) "this" determined by "HOW" !! a function
+        // is invoked (left of .)
+
+        // defaults to global - window
+        // arrow function - pump the breaks
+        console.log(this);
+        function showThis(){
+            console.log(this);
+        }
+        const first = {
+            name:'first',
+            showThis:showThis
+        }
+        const second = {
+            name:'second',
+            showThis:showThis
+        }
+        // console.log(first.name);
+        first.showThis()
+        second.showThis()
+        const btn1 = document.querySelector('.btn-1')
+        const btn2 = document.querySelector('.btn-2')
+
+        btn1.addEventListener('click', showThis)
+        btn2.addEventListener('click', showThis)
+    </script>
+</body>
+</html>

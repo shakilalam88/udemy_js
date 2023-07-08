@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Blue print
+        //factory function and constructor function
+        //factory function
+
+        // function showThis(){
+        //     console.log(this);
+        // }
+        // const first = {
+        //     name:'first',
+        //     showThis:showThis
+        // }
+        // const second = {
+        //     name:'second',
+        //     showThis:showThis
+        // }
+        // // console.log(first.name);
+
+        function createPerson(firstName,lastName){
+            return {
+                firstName: firstName,
+                lastName: lastName,
+                fullName: function(){
+                    console.log(`my full name is ${this.firstName} ${this.lastName} and i love js`);
+                }
+            }
+        }
+        
+        const john = createPerson('john','anderson1')
+        // console.log(john.firstName);
+        // console.log(john.lastName);
+        john.fullName()
+
+        const bob = createPerson('bob','anderson2')
+        bob.fullName()
+        const susy = createPerson('susy','anderson3')
+        susy.fullName()
+        
+    </script>
+</body>
+</html>
